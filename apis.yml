@@ -1,25 +1,67 @@
 aid: brewbird
+
 name: Brewbird
-description: 'Brewbird is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by sequoia-capital) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://framerusercontent.com/images/CSTpfrHDl4rHQYTBtqKnVjB3M.png
+
+description: 'Brewbird provides self‑serve, whole‑bean specialty coffee solutions for offices and hospitality spaces. Their platform lets workplaces offer fresh brewed coffee on demand, using compostable pods filled with beans from top‑tier roasters. Brewbird emphasizes sustainability, zero‑fuss brewing, and a curated selection of local roasters, aiming to replace traditional coffee machines and reduce waste.'
+
 url: https://raw.githubusercontent.com/api-evangelist/brewbird/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
 - Company
-apis: []
+- Coffee
+- B2B
+- Sustainability
+- Office
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+common:
+- type: Hosts
+  url: hosts/brewbird-hosts.yml
+- type: PrivacyPolicy
+  url: https://brewbird.com/privacy-policy
+- type: Blog
+  url: https://brewbird.com/blog
+- type: DomainSecurity
+  url: security/brewbird-domain-security.yml
+- type: Website
+  url: https://brewbird.com/
+
+apis: []
+
 x-backed-by:
 - sequoia-capital
-common:
-- type: Website
-  url: https://www.brewbird.com/
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Brewbird's website provides no developer documentation or API reference.
+  evidence:
+    - url: https://brewbird.com
+      status: 200
+  checked: '2026-10-23'
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
